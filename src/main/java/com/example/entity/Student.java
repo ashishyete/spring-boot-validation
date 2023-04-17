@@ -1,6 +1,7 @@
 package com.example.entity;
 
 
+import com.example.validation.StudentCourseValidator;
 import lombok.*;
 
 import javax.persistence.Entity;
@@ -39,5 +40,6 @@ public class Student {
     @NotNull(message = "Zip should not be null")
     private int zip;
     @NotNull(message = "Course should not be null")
+    @StudentCourseValidator
     private String course;
 }
